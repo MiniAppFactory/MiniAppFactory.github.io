@@ -33,12 +33,32 @@
     border-bottom: 2px solid #7c3aed;
     padding-bottom: 4px;
   }
+  h3 {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
   ul {
     padding-left: 22px;
   }
   li {
     margin-bottom: 6px;
   }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 0.92rem;
+    display: block;
+    overflow-x: auto;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f7f5fb; }
   code {
     background: #f2f2f7;
     padding: 1px 5px;
@@ -64,97 +84,134 @@
 <div class="wrap">
 
   <h1>Privacy Policy — KronDx: Neon Brick Breaker</h1>
-  <div class="meta">Effective date: 2026-09-27</div>
+  <div class="meta">Effective date: 2026-09-27 &middot; Last updated: 2026-09-27 (adds Google Play Billing and Google Play Games Services)</div>
 
   <h2>Summary</h2>
   <p>
-    KronDx: Neon Brick Breaker does not collect, store, or transmit any personal
-    data. The app does not connect to the internet, does not show ads, does not
-    use analytics or crash reporting, and does not require an account or sign-in.
-    All game progress is saved only on your own device.
+    KronDx: Neon Brick Breaker (the "app") is developed by MiniAppFactory ("we", "us").
+    The game itself runs offline: your progress, earned coins, skins and boosters are saved
+    on your own device, and we do not operate any server of our own. The app uses Google services, each governed by
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>
+    in addition to this policy:
   </p>
-
-  <h2>Data we collect</h2>
+  <ul>
+    <li><strong>Google Play Billing</strong> connects at startup and resume to load prices and recover unfinished purchases. Buying a coin pack is optional.</li>
+    <li><strong>Google Play Games Services</strong> is disabled in the current versionCode 3 closed test. In later enabled builds, it can initialize and collect service diagnostics before an interactive sign-in. Signed-in players can publish their total score.</li>
+  </ul>
   <p>
-    We (MiniAppFactory) do not collect any data from this app. No data is sent
-    to us, to any server, or to any third party, because the app has no network
-    access at all.
+    The app shows no ads, contains no advertising, analytics or crash-reporting SDK of our own,
+    has no chat or user-generated content, and never requires an account to play.
   </p>
 
   <h2>Data stored on your device</h2>
   <p>
-    The app stores the following information locally on your device only,
-    using Android's standard app-private storage (SharedPreferences). This
-    information never leaves your device through the app:
+    The app stores the following information locally, in Android's app-private storage
+    (SharedPreferences). This information is not sent to us:
   </p>
   <ul>
-    <li>In-game coin balance</li>
-    <li>Level progress, stars earned, and per-level high scores (up to 500 levels)</li>
-    <li>Owned and equipped paddle skins</li>
-    <li>Owned support boosters</li>
+    <li>In-game coin balance (earned coins and coins credited from purchased packs)</li>
+    <li>Level progress, stars earned and per-level best scores (up to 500 levels), and the
+      resulting total score</li>
+    <li>Owned and equipped paddle skins, owned support boosters</li>
     <li>Daily reward streak and the last date a daily reward was claimed</li>
     <li>Sound on/off preference</li>
+    <li>A record of each completed coin-pack purchase (Google Play purchase token, product id,
+      coins credited, time) — kept so that the same purchase can never be credited twice,
+      and so that an interrupted purchase can be completed after a restart</li>
+    <li>The highest score submitted per Play Games profile and leaderboard, keyed by a one-way hash of the profile identifier</li>
   </ul>
+
+  <p>Android Auto Backup may back up and restore wallet, progress and other app data under your device and Google account settings. Backup timing and availability are not guaranteed; we cannot access or restore your backup. Play Games leaderboards are not a cloud save or a wallet backup.</p>
+
+  <h2>Google Play Billing (coin packs)</h2>
   <p>
-    None of this data identifies you personally. It is only used to remember
-    your progress inside the game.
+    The shop offers five one-time coin packs (1,000 / 2,200 / 3,600 / 5,200 / 7,000 coins).
+    Buying one is entirely optional; every coin can also be earned by playing. Purchases are
+    processed by <strong>Google Play</strong>, not by us:
   </p>
+  <ul>
+    <li>Your payment method, billing address and full purchase history are handled by Google
+      Play under Google's terms and privacy policy. We never see your card or payment details.</li>
+    <li>The app receives from Google Play only what it needs to deliver the coins: the product id,
+      a purchase token, an order id, the purchase state (paid or pending) and the price text shown
+      in the shop. Prices are displayed in your local currency as provided by Google Play.</li>
+    <li>Coins are credited on your device and the purchase is then marked as consumed with Google
+      Play. If a purchase is pending (for example a cash payment at a store), coins are credited
+      once Google Play reports it as paid.</li>
+    <li>Refunds and receipts are managed through Google Play. Purchased coins are a digital in-game
+      item; they have no cash value and cannot be transferred or exchanged.</li>
+    <li>We do not send purchase data to any server of our own. Purchase records stay on your device
+      as described above.</li>
+  </ul>
+
+  <h2>Google Play Games Services (leaderboard)</h2>
+  <p><strong>Current versionCode 3 closed test: Play Games is disabled because online-service IDs are not configured. The following describes how it will work when enabled in a later build.</strong></p>
+  <p>
+    The leaderboard publishes your <strong>total score</strong> — the sum of your best score in each
+    level — through Google Play Games Services. Signing in is optional and the game is fully playable
+    without it; when signed out, the app shows only your local total.
+  </p>
+  <ul>
+    <li>When Play Games Services is enabled for the app, Google may show its own automatic sign-in
+      prompt at launch (this is a Google Play Games feature that you can turn off in the Google Play
+      Games app or in your device's Google settings). You can also sign in from the Leaderboard screen.</li>
+    <li>When you are signed in, the app receives your Play Games player id, display name (gamer tag) and
+      avatar from Google to show your status, and submits your total score to Google's leaderboard
+      whenever it is higher than the last submitted value. A lower replay never lowers your total.</li>
+    <li>Your leaderboard score, gamer tag and avatar can be visible to other players according to your
+      Google Play Games profile and privacy settings. Google stores and processes this data under
+      Google's Privacy Policy.</li>
+    <li>We do not receive your Google account e-mail, real name or contacts, and we do not run a server
+      that stores Play Games data. Cloud saves are not used; progress stays on the device.</li>
+    <li>To stop sharing scores, sign out or remove the game in the Google Play Games app; to delete your
+      Play Games profile data, use Google's account tools
+      (<a href="https://myaccount.google.com/" target="_blank" rel="noopener">myaccount.google.com</a>).</li>
+  </ul>
 
   <h2>Permissions</h2>
   <p>
-    The app requests no Android permissions. It does not request internet
-    access, storage, location, camera, microphone, contacts, or any other
-    permission.
+    The app declares the <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> permissions, used only by Google Play Billing and Google
+    Play Games Services as described above; the game logic never opens network connections of its own.
+    The Google Play Billing library also declares Google Play's billing permission
+    (<code>com.android.vending.BILLING</code>). The app requests no location, storage, camera, microphone,
+    contacts or other sensitive permission.
   </p>
 
-  <h2>Third-party services</h2>
+  <h2>Diagnostics</h2>
+  <p>We do not add our own analytics or crash-reporting service. Google's Billing SDK and Play Store may send service operation and diagnostic information to Google when connecting, querying products or processing purchases. When Play Games is enabled, its SDK automatically collects analytics and diagnostics to improve service stability and products, in addition to the gamer identity and scores described above. This activity may begin when the service initializes; it is not limited to a purchase or a manual sign-in. Google also operates Android vitals under its platform settings. Google's Privacy Policy applies to its processing.</p>
+
+  <h2>Data we share and data we sell</h2>
   <p>
-    KronDx: Neon Brick Breaker does not integrate any third-party SDK. Specifically, the app
-    contains no advertising SDK, no analytics SDK, no crash-reporting SDK,
-    no billing SDK, and no login/social SDK.
+    We do not sell any data. We do not share data with third parties other than the Google services
+    named above, which provide payments and configured leaderboards, including service operations described above.
   </p>
-  <p>
-    The only outside parties involved are the platforms you already use to get
-    and run the app:
-  </p>
-  <ul>
-    <li>The Google Play Store, which distributes the app and applies its own
-      standard policies to the download and installation process.</li>
-    <li>Your Android device's built-in backup system. If you have Android
-      device backup enabled on your device/Google account, the operating
-      system may include this app's local data in that system-level backup,
-      the same way it does for other apps. This is a feature of Android
-      itself, not something KronDx: Neon Brick Breaker sends anywhere on its own.</li>
-  </ul>
 
   <h2>Children</h2>
   <p>
-    KronDx: Neon Brick Breaker is a general-audience neon brick-breaker arcade game and is not
-    directed at children. It contains no chat, no user-generated content, no
-    social features, and no real-money purchases (coins are earned and spent only inside the game). We do not
-    knowingly collect any data from anyone, including children, because the
-    app does not collect data from anyone at all.
+    KronDx: Neon Brick Breaker is a general-audience arcade game intended for players aged 13 and over and
+    is not directed at children. It contains no chat and no user-generated content. Real-money coin packs
+    and the online leaderboard are optional and go through Google Play, which applies its own age and
+    parental-control settings (including purchase authentication). We do not knowingly collect personal
+    information from children.
   </p>
 
   <h2>Your choices / deleting data</h2>
-  <p>
-    Because KronDx: Neon Brick Breaker has no account and no server-side data, there is no "delete
-    my account" request to make. To remove all locally stored game data
-    (coins, progress, skins, boosters, settings), do either of the following
-    on your device:
-  </p>
   <ul>
-    <li>Go to Android Settings → Apps → KronDx: Neon Brick Breaker → Storage &amp; cache → Clear storage
-      (wording may vary slightly by Android version).</li>
-    <li>Uninstall the app. This removes all of its locally stored data from
-      your device.</li>
+    <li><strong>Local game data</strong> (coins, progress, skins, boosters, purchase records, settings):
+      go to Android Settings → Apps → KronDx: Neon Brick Breaker → Storage &amp; cache → Clear storage,
+      or uninstall the app. Note that clearing storage also removes coins credited from purchased packs;
+      Google Play keeps the purchase receipt, but consumed coin packs cannot be restored.</li>
+    <li><strong>Play Games data</strong>: sign out or remove the game from the Google Play Games app, or
+      manage/delete your Play Games profile through your Google account.</li>
+    <li><strong>Purchases</strong>: manage receipts and refunds at
+      <a href="https://play.google.com/store/account/orderhistory" target="_blank" rel="noopener">Google Play order history</a>.</li>
+    <li>For any other request, e-mail us at the address below.</li>
   </ul>
 
   <h2>Changes</h2>
   <p>
-    If this policy ever changes, an updated version will be published at this
-    same URL with a new effective date. Continued use of the app after an
-    update means you accept the revised policy.
+    If this policy changes, the new version will be published at this same URL with a new "Last updated"
+    date. Changes to data practices will be described in this policy and in the app where required.
   </p>
 
   <h2>Contact</h2>
@@ -164,7 +221,7 @@
   </p>
 
   <footer>
-    KronDx: Neon Brick Breaker — developed by MiniAppFactory.
+    KronDx: Neon Brick Breaker — developed by MiniAppFactory. Android package <code>com.miniappfactory.vortexbreakerdx</code>.
   </footer>
 
 </div>
