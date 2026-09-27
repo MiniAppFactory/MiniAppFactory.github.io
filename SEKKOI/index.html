@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEKKOI: Bounce & Bite — Privacy Policy / Gizlilik Politikası</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1a2e; --muted:#5a5a72; --accent:#6c3ce9; --line:#e6e2f5; --card:#f7f5fd;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#15121f; --fg:#f0eefa; --muted:#b3aecb; --accent:#a78bfa; --line:#2b2540; --card:#1c1830; }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:32px 20px 80px;}
+  header{margin-bottom:28px;}
+  h1{font-size:1.6rem; margin:0 0 6px;}
+  .meta{color:var(--muted); font-size:0.92rem;}
+  .lang-switch{display:flex; gap:8px; margin:20px 0 32px;}
+  .lang-switch button{
+    flex:1; padding:10px 14px; border-radius:10px; border:1px solid var(--line);
+    background:var(--card); color:var(--fg); font-size:0.95rem; cursor:pointer;
+  }
+  .lang-switch button[aria-pressed="true"]{background:var(--accent); color:#fff; border-color:var(--accent);}
+  h2{font-size:1.15rem; margin:32px 0 8px; padding-top:8px; border-top:1px solid var(--line);}
+  h2:first-of-type{border-top:none; padding-top:0;}
+  p, li{color:var(--fg);}
+  ul{padding-left:1.2em;}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:14px 0;}
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:0.92rem;}
+  th, td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--card);}
+  a{color:var(--accent);}
+  .lang-block{display:none;}
+  .lang-block.active{display:block;}
+  footer{margin-top:40px; color:var(--muted); font-size:0.85rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>SEKKOI: Bounce &amp; Bite</h1>
+    <div class="meta">Privacy Policy · Gizlilik Politikası — Last updated / Son güncelleme: 2026-09-27</div>
+  </header>
+
+  <div class="lang-switch">
+    <button id="btn-en" aria-pressed="true" onclick="showLang('en')">English</button>
+    <button id="btn-tr" aria-pressed="false" onclick="showLang('tr')">Türkçe</button>
+  </div>
+
+  <div class="lang-block active" id="lang-en" lang="en">
+    <h2>Who we are</h2>
+    <p>SEKKOI is developed by MiniAppFactory ("we", "us"). This policy explains what data the SEKKOI Android game (package <code>com.sekkoi.game</code>) collects and how it is used. Contact: <a href="mailto:whatsthisapp@proton.me">whatsthisapp@proton.me</a>.</p>
+
+    <h2>Who can use SEKKOI</h2>
+    <p>SEKKOI is intended for a general audience aged 13 and over. It is not designed for or directed at children, and we do not knowingly collect personal information from children.</p>
+
+    <h2>What data is collected</h2>
+    <div class="card">
+      <p>SEKKOI has <strong>no account system of its own</strong> and <strong>no advertising SDK</strong>. Your level progress, coin balance, character unlocks and settings are stored locally on your device and are never sent to us.</p>
+    </div>
+    <p>SEKKOI uses two Google-provided services, each governed by Google's own privacy terms in addition to this policy:</p>
+    <table>
+      <tr><th>Service</th><th>What it does in SEKKOI</th><th>Data involved</th></tr>
+      <tr>
+        <td>Google Play Games Services</td>
+        <td>Optional sign-in with your Google account to enable leaderboards/achievements. Playing SEKKOI does not require signing in.</td>
+        <td>Your Google account identifier and game data (scores, achievements) associated with that account, handled under Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</td>
+      </tr>
+      <tr>
+        <td>Google Play Billing</td>
+        <td>Used for optional in-app coin purchases. As of this version, purchases are not yet enabled for sale.</td>
+        <td>When active, purchase and transaction data is processed by Google Play, not by SEKKOI's own servers (we do not operate one).</td>
+      </tr>
+    </table>
+    <p>Because Play Games Services and Play Billing are Google libraries, the device may also exchange basic diagnostic/connectivity signals with Google as part of normal Google Play Services operation, under Google's own data handling practices — SEKKOI's own code does not add tracking on top of this.</p>
+
+    <h2>Permissions</h2>
+    <p>SEKKOI requests <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> (needed for Play Games/Billing connectivity) and the Play Billing library permission. SEKKOI does not request camera, microphone, location, contacts, storage, or SMS permissions, and does not use an advertising ID.</p>
+
+    <h2>What we don't do</h2>
+    <ul>
+      <li>No ads or ad networks.</li>
+      <li>No location tracking (precise or approximate).</li>
+      <li>No user-generated content, chat, or messaging between players.</li>
+      <li>No sale of personal data.</li>
+    </ul>
+
+    <h2>Data retention and deletion</h2>
+    <p>Local game data lives only on your device and is removed when you uninstall SEKKOI or clear the app's storage. Data associated with your Google account (Play Games scores, purchase history) is controlled by your Google account settings — see <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">Google Account data & privacy</a> to view or delete it. SEKKOI has no separate account to delete because it has no account system of its own.</p>
+
+    <h2>Children</h2>
+    <p>SEKKOI is not directed at children under 13 and is not part of Google Play's "Designed for Families" program.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If SEKKOI's data practices change (for example, when coin purchases go live or if a backend is added), this page will be updated and the "Last updated" date above will change.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:whatsthisapp@proton.me">whatsthisapp@proton.me</a></p>
+  </div>
+
+  <div class="lang-block" id="lang-tr" lang="tr">
+    <h2>Biz kimiz</h2>
+    <p>SEKKOI, MiniAppFactory ("biz") tarafından geliştirilmektedir. Bu politika, SEKKOI Android oyununun (paket adı <code>com.sekkoi.game</code>) hangi verileri topladığını ve nasıl kullandığını açıklar. İletişim: <a href="mailto:whatsthisapp@proton.me">whatsthisapp@proton.me</a>.</p>
+
+    <h2>SEKKOI'yi kimler kullanabilir</h2>
+    <p>SEKKOI, 13 yaş ve üzeri genel kitleye yöneliktir. Çocuklara özel tasarlanmamıştır ve çocuklardan bilerek kişisel bilgi toplanmaz.</p>
+
+    <h2>Hangi veriler toplanıyor</h2>
+    <div class="card">
+      <p>SEKKOI'nin <strong>kendi hesap sistemi yoktur</strong> ve <strong>reklam SDK'sı içermez</strong>. Bölüm ilerlemeniz, coin bakiyeniz, karakter açmalarınız ve ayarlarınız yalnızca cihazınızda yerel olarak saklanır, bize hiç gönderilmez.</p>
+    </div>
+    <p>SEKKOI, her biri Google'ın kendi gizlilik şartlarına da tabi olan iki Google servisi kullanır:</p>
+    <table>
+      <tr><th>Servis</th><th>SEKKOI'de ne işe yarıyor</th><th>İlgili veri</th></tr>
+      <tr>
+        <td>Google Play Games Services</td>
+        <td>Liderlik tablosu/başarımlar için isteğe bağlı Google hesabıyla giriş. SEKKOI'yi oynamak için giriş yapmak gerekmez.</td>
+        <td>Google hesap kimliğiniz ve o hesapla ilişkili oyun verisi (skor, başarım), Google'ın <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Gizlilik Politikası</a> kapsamında işlenir.</td>
+      </tr>
+      <tr>
+        <td>Google Play Billing</td>
+        <td>İsteğe bağlı coin satın alma altyapısı için kullanılır. Bu sürümde satış henüz açık değildir.</td>
+        <td>Etkinleştirildiğinde satın alma/işlem verisi Google Play tarafından işlenir; SEKKOI'nin kendi bir sunucusu yoktur.</td>
+      </tr>
+    </table>
+    <p>Play Games Services ve Play Billing Google kütüphaneleri olduğu için, cihazınız Google Play Services'in normal çalışması kapsamında Google ile temel tanılama/bağlantı sinyalleri paylaşabilir — bu, Google'ın kendi veri işleme uygulamalarına tabidir; SEKKOI'nin kendi kodu buna ek bir takip eklemez.</p>
+
+    <h2>İzinler</h2>
+    <p>SEKKOI, <code>INTERNET</code> ve <code>ACCESS_NETWORK_STATE</code> izinlerini (Play Games/Billing bağlantısı için) ve Play Billing kütüphane iznini kullanır. Kamera, mikrofon, konum, rehber, depolama veya SMS izni istemez; reklam kimliği kullanmaz.</p>
+
+    <h2>Yapmadıklarımız</h2>
+    <ul>
+      <li>Reklam veya reklam ağı yok.</li>
+      <li>Konum takibi yok (hassas veya yaklaşık).</li>
+      <li>Oyuncular arası kullanıcı içeriği, sohbet veya mesajlaşma yok.</li>
+      <li>Kişisel verinin satışı yok.</li>
+    </ul>
+
+    <h2>Veri saklama ve silme</h2>
+    <p>Yerel oyun verisi yalnızca cihazınızda tutulur; SEKKOI'yi kaldırdığınızda veya uygulama verisini temizlediğinizde silinir. Google hesabınızla ilişkili veriler (Play Games skorları, satın alma geçmişi) Google hesap ayarlarınızdan yönetilir — görüntülemek veya silmek için <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">Google Hesabı veri ve gizlilik</a> sayfasına bakın. SEKKOI'nin kendi hesap sistemi olmadığı için silinecek ayrı bir hesabı yoktur.</p>
+
+    <h2>Çocuklar</h2>
+    <p>SEKKOI 13 yaş altı çocuklara yönelik değildir ve Google Play'in "Designed for Families" programına dahil değildir.</p>
+
+    <h2>Bu politikadaki değişiklikler</h2>
+    <p>SEKKOI'nin veri uygulamaları değişirse (örneğin coin satışı açıldığında veya bir sunucu eklendiğinde), bu sayfa güncellenir ve yukarıdaki "Son güncelleme" tarihi değişir.</p>
+
+    <h2>İletişim</h2>
+    <p><a href="mailto:whatsthisapp@proton.me">whatsthisapp@proton.me</a></p>
+  </div>
+
+  <footer>SEKKOI · MiniAppFactory · com.sekkoi.game</footer>
+</div>
+<script>
+  function showLang(l){
+    document.getElementById('lang-en').classList.toggle('active', l==='en');
+    document.getElementById('lang-tr').classList.toggle('active', l==='tr');
+    document.getElementById('btn-en').setAttribute('aria-pressed', l==='en');
+    document.getElementById('btn-tr').setAttribute('aria-pressed', l==='tr');
+  }
+</script>
+</body>
+</html>
