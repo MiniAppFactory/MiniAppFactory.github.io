@@ -84,7 +84,7 @@
 <div class="wrap">
 
   <h1>Privacy Policy — KronDx: Neon Brick Breaker</h1>
-  <div class="meta">Effective date: 2026-09-27 &middot; Last updated: 2026-09-27 (adds Google Play Billing and Google Play Games Services)</div>
+  <div class="meta">Effective date: 2026-09-27 &middot; Last updated: 2026-09-27 (versionCode 4: Play Games activation and automatic SDK data)</div>
 
   <h2>Summary</h2>
   <p>
@@ -96,7 +96,7 @@
   </p>
   <ul>
     <li><strong>Google Play Billing</strong> connects at startup and resume to load prices and recover unfinished purchases. Buying a coin pack is optional.</li>
-    <li><strong>Google Play Games Services</strong> is disabled in the current versionCode 3 closed test. In later enabled builds, it can initialize and collect service diagnostics before an interactive sign-in. Signed-in players can publish their total score.</li>
+    <li><strong>Google Play Games Services</strong> is enabled from versionCode 4. It initializes at launch for automatic authentication and service analytics/diagnostics. Existing profiles may sign in automatically under your Google settings; signed-in players' accumulated scores are then synchronized. Gameplay remains available without signing in.</li>
   </ul>
   <p>
     The app shows no ads, contains no advertising, analytics or crash-reporting SDK of our own,
@@ -145,27 +145,13 @@
   </ul>
 
   <h2>Google Play Games Services (leaderboard)</h2>
-  <p><strong>Current versionCode 3 closed test: Play Games is disabled because online-service IDs are not configured. The following describes how it will work when enabled in a later build.</strong></p>
-  <p>
-    The leaderboard publishes your <strong>total score</strong> — the sum of your best score in each
-    level — through Google Play Games Services. Signing in is optional and the game is fully playable
-    without it; when signed out, the app shows only your local total.
-  </p>
+  <p><strong>Enabled from versionCode 4.</strong> The online leaderboard uses your <strong>total score</strong>, the sum of your best score in each level. A lower replay does not reduce that total. The game also keeps your local total and remains playable without a Play Games profile or successful sign-in.</p>
   <ul>
-    <li>When Play Games Services is enabled for the app, Google may show its own automatic sign-in
-      prompt at launch (this is a Google Play Games feature that you can turn off in the Google Play
-      Games app or in your device's Google settings). You can also sign in from the Leaderboard screen.</li>
-    <li>When you are signed in, the app receives your Play Games player id, display name (gamer tag) and
-      avatar from Google to show your status, and submits your total score to Google's leaderboard
-      whenever it is higher than the last submitted value. A lower replay never lowers your total.</li>
-    <li>Your leaderboard score, gamer tag and avatar can be visible to other players according to your
-      Google Play Games profile and privacy settings. Google stores and processes this data under
-      Google's Privacy Policy.</li>
-    <li>We do not receive your Google account e-mail, real name or contacts, and we do not run a server
-      that stores Play Games data. Cloud saves are not used; progress stays on the device.</li>
-    <li>To stop sharing scores, sign out or remove the game in the Google Play Games app; to delete your
-      Play Games profile data, use Google's account tools
-      (<a href="https://myaccount.google.com/" target="_blank" rel="noopener">myaccount.google.com</a>).</li>
+    <li>Play Games initializes when the app starts. Existing profiles may sign in automatically according to your Google settings, without pressing the game's Sign In button. Automatic profile-creation prompts are suppressed for devices without an existing Play Games profile; you can start that process from Sign In.</li>
+    <li>After authentication, the app reads your Play Games player ID and display name (gamer tag). It automatically submits a higher accumulated total after sign-in and as your score improves. Opening the online leaderboard is not required for synchronization.</li>
+    <li>Google handles profile identity, leaderboard storage and visibility. The Google leaderboard can show your gamer tag, avatar and score according to your profile settings. The game does not request your legal name, Google e-mail address, contacts or friends list.</li>
+    <li>We do not operate an account database. The app stores a hash of the player/leaderboard identifier and the last confirmed score locally to avoid duplicate submissions. Play Games does not back up or restore your coin wallet, unlocks or level progress in this app.</li>
+    <li>You can change sign-in behavior or sign out through your device's Google settings → All services → Play Games → Sign in account, or the Play Store's Play Games profile settings. See <a href="https://support.google.com/googleplay/answer/3129346" target="_blank" rel="noopener">Google's sign-in and privacy controls</a>. Restart the game after changing the account. Signing out stops authenticated score synchronization; it does not disable the app's Google SDK diagnostics.</li>
   </ul>
 
   <h2>Permissions</h2>
@@ -178,7 +164,7 @@
   </p>
 
   <h2>Diagnostics</h2>
-  <p>We do not add our own analytics or crash-reporting service. Google's Billing SDK and Play Store may send service operation and diagnostic information to Google when connecting, querying products or processing purchases. When Play Games is enabled, its SDK automatically collects analytics and diagnostics to improve service stability and products, in addition to the gamer identity and scores described above. This activity may begin when the service initializes; it is not limited to a purchase or a manual sign-in. Google also operates Android vitals under its platform settings. Google's Privacy Policy applies to its processing.</p>
+  <p>We do not add a separate developer analytics or crash-reporting service. Google Play Billing starts at launch/resume and sends service operation and diagnostic information to Google. Play Games also initializes at launch and automatically collects analytics and diagnostics for service stability and improvements. These SDK activities do not wait for a purchase or the game's Sign In button, and the app has no switch to disable them. Google's <a href="https://developer.android.com/games/pgs/data-collection" target="_blank" rel="noopener">Play Games data disclosure</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> describe its processing. Google also operates Android vitals under its platform settings.</p>
 
   <p>Technical diagnostics can include randomly generated SDK client/session identifiers, app and SDK versions, device model/manufacturer and OS build information, memory, locale, network type, operation results and event timings. The inspected Billing integration does not request advertising IDs, Android ID, IMEI or GPS coordinates.</p>
 
@@ -203,8 +189,7 @@
       go to Android Settings → Apps → KronDx: Neon Brick Breaker → Storage &amp; cache → Clear storage,
       or uninstall the app. Note that clearing storage also removes coins credited from purchased packs;
       Google Play keeps the purchase receipt, but consumed coin packs cannot be restored.</li>
-    <li><strong>Play Games data</strong>: sign out or remove the game from the Google Play Games app, or
-      manage/delete your Play Games profile through your Google account.</li>
+    <li><strong>Play Games data</strong>: manage sign-in separately from deletion. Use <a href="https://support.google.com/googleplay/answer/9130646" target="_blank" rel="noopener">Google's game-data deletion instructions</a> to delete KronDx's Play Games data or your profile. Deletion from Google does not erase the game's local score; if you keep the local data and sign in again, the app can submit that score again. To prevent that, remain signed out or also clear local game data.</li>
     <li><strong>Purchases</strong>: manage receipts and refunds at
       <a href="https://play.google.com/store/account/orderhistory" target="_blank" rel="noopener">Google Play order history</a>.</li>
     <li>For any other request, e-mail us at the address below.</li>
@@ -213,6 +198,7 @@
   <p>Clearing local app storage does not delete Android backup copies or records retained by Google. Manage backups through your device or Google backup settings and use Google privacy controls for Google service data. We cannot erase Google payment receipts or guarantee deletion of Google diagnostic records on your behalf.</p>
 
   <h2>Changes</h2>
+  <p>Version history: versionCode 3 kept Play Games disabled; versionCode 4 enables the behavior described above.</p>
   <p>
     If this policy changes, the new version will be published at this same URL with a new "Last updated"
     date. Changes to data practices will be described in this policy and in the app where required.
