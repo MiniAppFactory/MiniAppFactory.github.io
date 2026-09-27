@@ -69,13 +69,13 @@
       <tr><th>Service</th><th>What it does in SEKKOI</th><th>Data involved</th></tr>
       <tr>
         <td>Google Play Games Services</td>
-        <td>Optional sign-in with your Google account to enable leaderboards/achievements. Playing SEKKOI does not require signing in.</td>
-        <td>Your Google account identifier and game data (scores, achievements) associated with that account, handled under Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</td>
+        <td>Optional sign-in with your Google account to enable leaderboards. When you are signed in, your campaign total score and daily challenge score are uploaded to Google Play Games leaderboards so they can be ranked against other players. Playing SEKKOI does not require signing in, and SEKKOI does not use Play Games cloud saves.</td>
+        <td>Your Google Play Games player identity and the scores you upload, associated with that account, handled under Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</td>
       </tr>
       <tr>
         <td>Google Play Billing</td>
-        <td>Used for optional in-app coin purchases. As of this version, purchases are not yet enabled for sale.</td>
-        <td>When active, purchase and transaction data is processed by Google Play, not by SEKKOI's own servers (we do not operate one).</td>
+        <td>Used for optional in-app coin purchases. Purchases, payment and refunds are handled entirely by Google Play. The "Restore purchases" option re-checks your Google Play purchase history and completes any purchase that was paid for but not yet delivered.</td>
+        <td>Purchase and transaction data is processed by Google Play, not by SEKKOI's own servers (we do not operate one). Coin packs that were already delivered and spent cannot be restored from Google Play; your coin balance itself travels to a new phone only through Android Backup (see below).</td>
       </tr>
     </table>
     <p>Because Play Games Services and Play Billing are Google libraries, the device may also exchange basic diagnostic/connectivity signals with Google as part of normal Google Play Services operation, under Google's own data handling practices — SEKKOI's own code does not add tracking on top of this.</p>
@@ -120,13 +120,13 @@
       <tr><th>Servis</th><th>SEKKOI'de ne işe yarıyor</th><th>İlgili veri</th></tr>
       <tr>
         <td>Google Play Games Services</td>
-        <td>Liderlik tablosu/başarımlar için isteğe bağlı Google hesabıyla giriş. SEKKOI'yi oynamak için giriş yapmak gerekmez.</td>
-        <td>Google hesap kimliğiniz ve o hesapla ilişkili oyun verisi (skor, başarım), Google'ın <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Gizlilik Politikası</a> kapsamında işlenir.</td>
+        <td>Liderlik tabloları için isteğe bağlı Google hesabıyla giriş. Giriş yaptığınızda kampanya toplam skorunuz ve günlük meydan okuma skorunuz, diğer oyuncularla sıralanabilmesi için Google Play Games liderlik tablolarına yüklenir. SEKKOI'yi oynamak için giriş yapmak gerekmez; SEKKOI, Play Games bulut kaydı kullanmaz.</td>
+        <td>Google Play Games oyuncu kimliğiniz ve yüklediğiniz skorlar, o hesapla ilişkili olarak Google'ın <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Gizlilik Politikası</a> kapsamında işlenir.</td>
       </tr>
       <tr>
         <td>Google Play Billing</td>
-        <td>İsteğe bağlı coin satın alma altyapısı için kullanılır. Bu sürümde satış henüz açık değildir.</td>
-        <td>Etkinleştirildiğinde satın alma/işlem verisi Google Play tarafından işlenir; SEKKOI'nin kendi bir sunucusu yoktur.</td>
+        <td>İsteğe bağlı coin satın alma için kullanılır. Satın alma, ödeme ve iade tamamen Google Play tarafından yürütülür. "Satın almaları geri yükle" seçeneği Google Play satın alma geçmişinizi yeniden kontrol eder ve ödenmiş ama henüz teslim edilmemiş bir satın almayı tamamlar.</td>
+        <td>Satın alma/işlem verisi Google Play tarafından işlenir; SEKKOI'nin kendi bir sunucusu yoktur. Teslim edilmiş ve harcanmış coin paketleri Google Play'den geri getirilemez; coin bakiyenizin kendisi yeni bir telefona yalnızca Android Yedekleme ile taşınır (aşağıya bakın).</td>
       </tr>
     </table>
     <p>Play Games Services ve Play Billing Google kütüphaneleri olduğu için, cihazınız Google Play Services'in normal çalışması kapsamında Google ile temel tanılama/bağlantı sinyalleri paylaşabilir — bu, Google'ın kendi veri işleme uygulamalarına tabidir; SEKKOI'nin kendi kodu buna ek bir takip eklemez.</p>
